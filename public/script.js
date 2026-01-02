@@ -7,13 +7,14 @@ let check;
 //Save the url
 let save;
 
-export {check}
 //If the user clicks on the button
 enter_button.addEventListener("click", async ()=>{
     //Gets the api
     my_api = await get_api(document.getElementById("info").value)
     check = my_api[0]
     document.getElementById("valid").style.visibility = "visible";
+
+    //Checks if the api is real
     if(check)
     {
         document.getElementById("valid").innerHTML = "This API does exists"
@@ -23,12 +24,13 @@ enter_button.addEventListener("click", async ()=>{
     }
     else
     {
-        
+        //Shows that there is no api   
         document.getElementById("valid").innerHTML = "This API does not exists"
         document.getElementById("reveal").style.visibility = "hidden"
     }
 })
 
+//Reveals the api
 document.getElementById("reveal").addEventListener("click",()=>{
     sessionStorage.setItem("save", save);
     window.location.href="raw_data.html";
