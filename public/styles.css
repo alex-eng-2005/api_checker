@@ -1,11 +1,13 @@
 body{
-    margin: auto 0
+    margin: auto 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 #info_place
 {
     text-align: center;
-    height: 200px;
+    height: 100vh;
     background: linear-gradient(#3586ff, #99FFFF);
     border: 1px solid black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
